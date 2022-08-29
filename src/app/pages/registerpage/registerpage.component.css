@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  background-color: #181920;
+  width: 380px;
+  height: 450px;
+  border-radius: 8px;
+  padding: 35px;
+}
+
+h2,
+label,
+p {
+  color: white;
+}

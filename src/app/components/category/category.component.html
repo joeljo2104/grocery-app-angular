@@ -1,0 +1,15 @@
+<div class="container" style="margin:50px;">
+    <h3>Categories</h3>
+    <br>
+    <div class="card-group">
+        <div class="col" *ngFor="let category of categories">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ 'http://rjtmobile.com/grocery/images/' + category.catImage }}" class="card-img-top" style="height:200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ category.catName }}</h5>
+                    <button (click)="onClickHandler( category.catId )" class="btn btn-primary">Select</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

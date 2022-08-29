@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="col-7" style="display:inline-block; height:400px;">
+        <h1 class="display-5 fw-bold">{{ product.productName }}</h1>
+        <p class="col-md-8 fs-4">{{ product.description }}
+        </p>
+        <h3>{{ product.price | currency: 'INR' }} <span class="mrp">
+                <del> {{ product.mrp | currency: 'INR' }}</del>
+            </span></h3>
+
+        <button class="btn btn-primary btn-lg" type="button">Buy Now</button>
+    </div>
+    <div class="col-5" style="float:right;">
+        <img src='{{"http://rjtmobile.com/grocery/images/" + product.image }}'
+            style="height:400px; width:400px; object-fit: cover;">
+    </div>
+</div>
+

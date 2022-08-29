@@ -1,0 +1,47 @@
+<!-- <div class="card-group">
+  <div class="col" *ngFor="let product of products">
+    <div class="card" style="width: 18rem; margin-top:20px;">
+      <img src="{{ 'http://rjtmobile.com/grocery/images/' + product.image }}" class="card-img-top"
+        style="height:200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.productName }}</h5>
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">{{ product.price | currency: "INR" }}</button>
+          <button type="button" class="btn btn-sm btn-success">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container page-wrapper">
+  <div class="page-inner">
+    <div class="row" >
+      <div class="el-wrapper" *ngFor="let product of products">
+        <div class="box-up">
+          <img class="img" src="{{ 'http://rjtmobile.com/grocery/images/' + product.image }}" style="height:200px; object-fit: cover;" alt="">
+          <div class="img-info">
+            <div class="info-inner">
+              <span class="p-name">{{ product.productName }}</span>
+              <span class="p-company">{{ product.unit }}</span>
+            </div>
+            <div class="a-size">MRP : <span class="mrp"><del>{{ product.mrp | currency: "INR" }}</del></span></div>
+          </div>
+        </div>
+
+        <div class="box-down">
+          <div class="h-bg">
+            <div class="h-bg-inner"></div>
+          </div>
+
+          <a class="cart" (click)="onButtonClicked(product._id)">
+            <span class="price">{{ product.price | currency: "INR" }}</span>
+            <span class="add-to-cart">
+              <span class="txt">Add in cart</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

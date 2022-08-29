@@ -1,0 +1,4 @@
+<h4>SubCategories</h4>
+<ul class="list-group list-group-flush" *ngFor="let subcategory of subCategories">
+    <li (click)="onClickHandler( subcategory.subId )" class="list-group-item">{{ subcategory.subName }}</li>
+</ul>
